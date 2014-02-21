@@ -1,0 +1,28 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wesleycho/weather",
+  "authors": [
+    "Wesley Cho <@wesleycho>"
+  ],
+  "description": "Weather app",
+  "main": "manage.py",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.13",
+    "angular-ui-router": "0.2.8-bowratic-tedium",
+    "angular-bootstrap": "0.10.0",
+    "bootstrap": "3.1.0",
+    "lodash": "2.4.1",
+    "underscore.string": "2.3.2"
+  }
+}

@@ -1,0 +1,53 @@
+ui-view.container-fluid {
+    padding-bottom: 70px;
+}
+
+.jumbotron h1 {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin: 0 7px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alert {
+    width: 50%;
+    margin: 0 auto;
+}
+
+weather-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    box-shadow: inset 0 0 10px #ccc;
+    padding: 10px;
+    width: 50%;
+}
+
+weather-card > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+
+footer, .jumbotron {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    flex-direction: column;
+}
+
+.disclaimer img {
+    height: 40px;
+}

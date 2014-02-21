@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <h1>Your weather at your fingertips</h1>
+  <div class="weather-form">
+    <form name="weatherForm"
+          class="form-inline"
+          ng-class="{'has-error': alerts.length > 0}"
+          ng-submit="getWeather($event)"
+          novalidate>
+      <div class="form-group">
+        <label class="sr-only" for="City">City</label>
+        <input ng-model="weather.city"
+               ng-change="getCities()"
+               name="city"
+               class="form-control"
+               id="City"
+               placeholder="Washington"
+               typeahead="city.city as city.name for city in cities | limitTo: 8"
+               required>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="State">State</label>
+        <select id="State"
+                name="state"
+                ng-model="weather.state"
+                ng-options="state as state.abbr for state in states"
+                required></select>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Get My Weather!</button>
+      </div>
+    </form>
+  </div>
+</div>
+<alert type="'danger'" ng-repeat="alert in alerts" close="closeAlert($index)">
+  {[{ alert.message }]}
+</alert>
+<div class="card">
+  <weather-card weather="weatherData"
+                ng-show="weatherData"></weather-card>
+</div>
