@@ -25,6 +25,8 @@ Ideally, Less or Sass would be used to allow greater flexibility with theming/st
 
 The usage of flexbox here was pure experimentation, so it may not be used optimally.
 
+The styling is very basic - wish I had the time to think about the design & implement something more attractive.
+
 It would be better to use Grunt to compile all of the client-side scripts into one minified file, including usage of [grunt-ngmin](https://github.com/btford/grunt-ngmin) to handle automatic injection of services without manually using the array injection notation or `inject`.
 
 In general, a (mostly) clean separation of the client-side code from most server-side templating is better for development - the usage of Django templates is unnecessary here.
