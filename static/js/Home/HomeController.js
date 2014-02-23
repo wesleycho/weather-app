@@ -47,4 +47,8 @@ angular.module('WeatherApp.home', ['WeatherApp.weather'])
           $scope.cities = data.RESULTS;
         });
     }, 200);
+
+    $scope.selectState = function (city) {
+      $scope.weather.state = _.find(STATES, { name: city.state });
+    };
   });
