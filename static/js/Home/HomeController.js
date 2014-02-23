@@ -37,7 +37,6 @@ angular.module('WeatherApp.home', ['WeatherApp.weather'])
             return $scope.alerts.push({ message: data.response.error.description });
           }
           $scope.weatherData = data.current_observation;
-          console.log($scope.weatherData);
         });
     };
 
