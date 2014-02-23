@@ -11,18 +11,19 @@ angular.module('WeatherApp.utilities', [])
     };
 
     return function (url, method, data, config) {
+      method = method.toLowerCase();
       if (_.isObject(data)) {
-        if (method.toLowerCase() === 'get') {
+        if (method === 'get') {
           config = _.merge(config || {}, { params: data });
         }
       }
 
-      if (method.toLowerCase() === 'get') {
+      if (method === 'get') {
         return $http.get(url, config)
           .then(resolve);
       }
 
-      return $http[method.toLowerCase()](url, data, config)
+      return $http[method](url, data, config)
         .then(resolve);
     };
   });
